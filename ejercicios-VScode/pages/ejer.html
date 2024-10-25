@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Ejercicios de bucles</title>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="/inter.html">
+                <img src="../img/Orion.jpeg" alt="Imagen no encontrada" width="90px">
+            </a>
+            <h3>Next Programming</h3>
+          </div>
+        <h1>Ejercicios de bucles</h1>
+    </header>
+    <main>
+        <section id="ejercicio1" class="ejercicios">
+            <h1>Presentar un mensaje N veces</h1>
+            <form>
+                <div>
+                    <label for="msj">Ingrese un mensaje:</label>
+                    <input type="text" id="msj" placeholder="Escribe tu mensaje aqui">
+                </div>
+                <div>
+                    <label for="repeticiones">¿Cuantas veces quieres que se repita?</label>
+                    <input type="number" id="repeticiones" placeholder="Numero de repeticiones">
+                </div>
+                <div>
+                    <button type="button" onclick="mensaje()">Aceptar</button>
+                    <button type="reset">Cancelar</button>
+                </div>
+                <div>
+                    <label for="respuesta">Resultado:</label>
+                    <textarea id="respuesta" rows="10" cols="30" placeholder="Aqui aparecerá el resultado..."></textarea>
+                </div>
+            </form>
+        </section>
+        <section id="ejercicio2" class="ejercicios" style="display:none;">
+            <h1>Presentar numeros multiplos del 7 de 1 a N numeros</h1>
+            <form>
+                <div>
+                    <label for="cantidad">Ingrese un numero limite:</label>
+                    <input type="number" id="cantidad" placeholder="Escribe un numero">
+                </div>
+                <div>
+                    <button type="button" onclick="multiplos()">Aceptar</button>
+                    <button type="reset">Cancelar</button>
+                </div>
+                <div>
+                    <label for="respuesta_multiplos">Resultado:</label>
+                    <textarea id="respuesta_multiplos" rows="10" cols="30" placeholder="Aqui aparecerá el resultado..."></textarea>
+                </div>
+            </form>
+        </section>
+        <section id="ejercicio3" class="ejercicios" style="display:none;">
+            <h1>Presentar numeros multiplos de cualquier numero hasta N</h1>
+            <form>
+                <div>
+                    <label for="multiplos">Ingrese un numero que desea obtener sus multiplos:</label>
+                    <input type="number" id="multiplos" placeholder="Escribe un numero">
+                </div>
+                <div>
+                    <label for="cant">Ingrese un numero limite</label>
+                    <input type="number" id="cant" placeholder="Escribe un numero">
+                </div>
+                <div>
+                    <button type="button" onclick="multiplos_numeros()">Aceptar</button>
+                    <button type="reset">Cancelar</button>
+                </div>
+                <div>
+                    <label for="respu_multiplos">Resultado:</label>
+                    <textarea id="respu_multiplos" rows="10" cols="30" placeholder="Aqui aparecerá el resultado..."></textarea>
+                </div>
+            </form>
+        </section>
+        <section id="ejercicio4" class="ejercicios" style="display:none;">
+            <h1>Presentar los numeros Positivos de N numeros</h1>
+            <form>
+                <div>
+                    <label for="cant_positivo">Ingrese un numero limite:</label>
+                    <input type="number" id="cant_positivo" placeholder="Escribe un numero">
+                </div>
+                <div>
+                    <button type="button" onclick="positivo()">Aceptar</button>
+                    <button type="reset">Cancelar</button>
+                </div>
+                <div>
+                    <label for="respu_positivo">Resultado:</label>
+                    <textarea id="respu_positivo" rows="10" cols="30" placeholder="Aqui aparecerá el resultado..."></textarea>
+                </div>
+            </form>
+        </section>
+        <section id="ejercicio5" class="ejercicios" style="display:none;">
+            <h1>Presentar los numero Pares de N numeros</h1>
+            <form>
+                <div>
+                    <label for="cant_pares">Ingrese un numero limite:</label>
+                    <input type="number" id="cant_pares" placeholder="Escribe un numero">
+                </div>
+                <div>
+                    <button type="button" onclick="pares()">Aceptar</button>
+                    <button type="reset">Cancelar</button>
+                </div>
+                <div>
+                    <label for="respues_pares">Resultado:</label>
+                    <textarea id="respues_pares" rows="10" cols="30" placeholder="Aqui aparecerá el resultado..."></textarea>
+                </div>
+            </form>
+        </section>
+        <section id="ejercicio6" class="ejercicios" style="display:none;">
+            <h1>Presentar los divisores de cualquier numero. Ejem: num=6  divisores(1,2,3)</h1>
+            <form>
+                <div>
+                    <label for="divi">Ingrese el numero del que quiere obtener sus divisores:</label>
+                    <input type="number" id="divi" placeholder="Escribe un numero">
+                </div>
+                <div>
+                    <button type="button" onclick="divisores()">Aceptar</button>
+                    <button type="reset">Cancelar</button>
+                </div>
+                <div>
+                    <label for="respues_divisor">Resultado:</label>
+                    <textarea id="respues_divisor" rows="10" cols="30" placeholder="Aqui aparecerá el resultado..."></textarea>
+                </div>
+            </form>
+        </section>
+        <section id="ejercicio7" class="ejercicios" style="display:none;">
+            <h1>Presentar la tabla de sumar del 10 del 1 al 12 Ejemplo: (1+2=3 …12+2=14)</h1>
+            <form>
+                <div>
+                    <button type="button" onclick="tabla_suma()">Generar tabla de suma</button>
+                </div>
+                <div>
+                    <label for="respu_suma">Resultado:</label>
+                    <textarea id="respu_suma" rows="15" cols="30" placeholder="Aqui aparecerá el resultado..."></textarea>
+                </div>
+            </form>
+        </section>
+        <section id="ejercicio8" class="ejercicios" style="display:none;">
+            <h1>Presentar cualquier tabla de multiplicar desde un valor inicial a un valor final.</h1>
+            <form>
+                <div>
+                    <label for="multi">Ingrese un numero que desea obtener su tabla de multiplicar:</label>
+                    <input type="number" id="multi" placeholder="Escriba un numero">
+                </div>
+                <div>
+                    <label for="ini">Ingrese un valor inicial</label>
+                    <input type="number" id="ini" placeholder="Escriba un numero">
+                </div>
+                <div>
+                    <label for="fin">Ingrese un valor final</label>
+                    <input type="number" id="fin" placeholder="Escriba un numero">
+                </div>
+                <div>
+                    <button type="button" onclick="multiplicar()">Aceptar</button>
+                    <button type="reset">Cancelar</button>
+                </div>
+                <div>
+                    <label for="res_multi">Resultado:</label>
+                    <textarea id="res_multi" rows="10" cols="30" placeholder="Aqui aparecerá el resultado..."></textarea>
+                </div>
+            </form>
+        </section>
+        <section id="ejercicio9" class="ejercicios" style="display:none;">
+            <h1>Presentar los numeros comprendidos entre dos numeros</h1>
+            <form>
+                <div>
+                    <label for="num1">Ingrese un numero</label>
+                    <input type="number" id="num1" placeholder="Escriba un numero">
+                </div>
+                <div>
+                    <label for="num2">Ingrese un numero</label>
+                    <input type="number" id="num2" placeholder="Escriba un numero">
+                </div>
+                <div>
+                    <button type="button" onclick="numeros_comprendidos()">Aceptar</button>
+                    <button type="reset">Cancelar</button>
+                </div>
+                <div>
+                    <label for="rspu">Resultado:</label>
+                    <textarea id="rspu" rows="10" cols="30" placeholder="Aqui aparecerá el resultado..."></textarea>
+                </div>
+            </form>
+        </section>
+        <section id="ejercici10" class="ejercicios" style="display:none;">
+            <h1>Presentar los numeros paras comprendidos entre dos numeros</h1>
+            <form>
+                <div>
+                    <label for="numer1">Ingrese un numero</label>
+                    <input type="number" id="numer1" placeholder="Escriba un numero">
+                </div>
+                <div>
+                    <label for="numer2">Ingrese un numero</label>
+                    <input type="number" id="numer2" placeholder="Escriba un numero">
+                </div>
+                <div>
+                    <button type="button" onclick="pares_comprendidos()">Aceptar</button>
+                    <button type="reset">Cancelar</button>
+                </div>
+                <div>
+                    <label for="rspt">Resultado:</label>
+                    <textarea id="rspt" rows="10" cols="30" placeholder="Aqui aparecerá el resultado..."></textarea>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script src="../js/main.js"></script> 
+    <script>
+        // Función para obtener el parámetro de la URL
+        function getParameterByName(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Leer el parámetro 'ejercicio'
+        const ejercicioId = getParameterByName('ejercicio');
+
+        // Ocultar todos los ejercicios y mostrar solo el seleccionado
+        document.querySelectorAll('.ejercicios').forEach(section => {
+            section.style.display = 'none'; // Oculta todos los ejercicios
+        });
+
+        if (ejercicioId) {
+            const selectedEjercicio = document.getElementById('ejercicio' + ejercicioId);
+            if (selectedEjercicio) {
+                selectedEjercicio.style.display = 'block'; // Muestra el ejercicio seleccionado
+            }
+        }
+    </script>
+    <footer>
+        <h5>Next Programming - Derechos Reservados <span>Corporacion N.P.</span></h5>
+    </footer>
+</body>
+</html>
